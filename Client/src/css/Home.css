@@ -1,0 +1,63 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.team-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  transition: transform 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-header {
+  background-color: #2f80ed;
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  text-align: center;
+}
+
+.player-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 1rem;
+}
+
+.player {
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.filled {
+  background-color: #dff6dd;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.pending {
+  background-color: #fff4e5;
+  color: #f57c00;
+  border: 1px dashed #ffcc80;
+}

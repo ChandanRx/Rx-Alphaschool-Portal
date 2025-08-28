@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+  background-color: #f8fafc;
+}
+
+html.dark {
+  background-color: #090908; 
+}
