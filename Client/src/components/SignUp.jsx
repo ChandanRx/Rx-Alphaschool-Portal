@@ -45,7 +45,7 @@ const SignUp = () => {
       data.append("password", formData.password);
       if (formData.profile) data.append("profilePic", formData.profile);
 
-      const res = await fetch("http://localhost:5000/api/users/register", {
+      const res = await fetch("https://rx-alphaschool-portal.onrender.com/api/users/register", {
         method: "POST",
         body: data,
       });
