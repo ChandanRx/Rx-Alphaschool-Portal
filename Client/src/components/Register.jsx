@@ -58,7 +58,7 @@ const Register = () => {
         data.append(key, formData[key]);
       });
 
-      const res = await fetch("http://localhost:5000/api/register", {
+      const res = await fetch("https://rx-alphaschool-portal.onrender.com/api/register", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
