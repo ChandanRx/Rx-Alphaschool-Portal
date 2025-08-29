@@ -45,7 +45,7 @@ const Profile = () => {
       setError(null);
       try {
         const response = await fetch(
-          `http://localhost:5000/api/users/profile/${userId}`,
+          `https://rx-alphaschool-portal.onrender.com/api/users/profile/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -86,7 +86,7 @@ const Profile = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/users/profile/${userId}`,
+        `https://rx-alphaschool-portal.onrender.com/api/users/profile/${userId}`,
         {
           method: "PUT",
           headers: {
