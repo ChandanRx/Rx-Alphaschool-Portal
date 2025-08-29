@@ -163,8 +163,8 @@ const Profile = () => {
             className="w-24 h-24 rounded-full border-4 border-lime-500 object-cover shadow-lg transition-transform duration-300 hover:scale-105"
           />
           <div>
-            <p className="text-2xl">{profileData?.fullname}</p>
-            <p className="text-sm">{profileData?.email}</p>
+            <p className="text-2xl dark:text-lime-400">{profileData?.fullname}</p>
+            <p className="text-sm dark:text-lime-400">{profileData?.email}</p>
           </div>
         </motion.div>
 
