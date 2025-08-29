@@ -31,7 +31,7 @@ const Events = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/events", {
+        const res = await fetch("https://rx-alphaschool-portal.onrender.com/api/events", {
           headers: { "Content-Type": "application/json" },
         });
         const data = await res.json();
