@@ -29,7 +29,7 @@ const Dashboard = () => {
 
   const fetchPlayers = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/register", { headers: authHeaders });
+      const res = await fetch("https://rx-alphaschool-portal.onrender.com/api/register", { headers: authHeaders });
       const data = await res.json();
       setPlayers(Array.isArray(data) ? data : data.players || []);
     } catch (err) {
@@ -39,7 +39,7 @@ const Dashboard = () => {
 
   const fetchSports = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/sports", { headers: authHeaders });
+      const res = await fetch("https://rx-alphaschool-portal.onrender.com/api/sports", { headers: authHeaders });
       const data = await res.json();
       setSports(data);
     } catch (err) {
@@ -49,7 +49,7 @@ const Dashboard = () => {
 
   const fetchEvents = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/events", { headers: authHeaders });
+      const res = await fetch("https://rx-alphaschool-portal.onrender.com/api/events", { headers: authHeaders });
       const data = await res.json();
       setEvents(data);
     } catch (err) {
@@ -59,7 +59,7 @@ const Dashboard = () => {
 
   const updatePlayerStatus = async (id, status) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/register/${id}/status`, {
+      const res = await fetch(`https://rx-alphaschool-portal.onrender.com/api/register/${id}/status`, {
         method: "PUT",
         headers: authHeaders,
         body: JSON.stringify({ status }),
@@ -75,7 +75,7 @@ const Dashboard = () => {
   const addSport = async () => {
     if (!newSportName.trim()) return alert("Enter a valid sport name");
     try {
-      const res = await fetch("http://localhost:5000/api/sports", {
+      const res = await fetch("https://rx-alphaschool-portal.onrender.com/api/sports", {
         method: "POST",
         headers: authHeaders,
         body: JSON.stringify({ name: newSportName.trim(), maxPlayers: Number(newSportMaxPlayers) }),
@@ -93,7 +93,7 @@ const Dashboard = () => {
   const removeSport = async (id) => {
     if (!window.confirm("Are you sure you want to delete this sport?")) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/sports/${id}`, { method: "DELETE", headers: authHeaders });
+      const res = await fetch(`https://rx-alphaschool-portal.onrender.com/api/sports/${id}`, { method: "DELETE", headers: authHeaders });
       const result = await res.json();
       if (res.ok) setSports(sports.filter((s) => s._id !== id));
       else alert(result.message);
@@ -106,7 +106,7 @@ const Dashboard = () => {
     if (!newEventTitle || !newEventDate || !newEventSport || !newEventTime || !newEventVenue)
       return alert("Please fill all event fields");
     try {
-      const res = await fetch("http://localhost:5000/api/events", {
+      const res = await fetch("https://rx-alphaschool-portal.onrender.com/api/events", {
         method: "POST",
         headers: authHeaders,
         body: JSON.stringify({
@@ -136,7 +136,7 @@ const Dashboard = () => {
   const removeEvent = async (id) => {
     if (!window.confirm("Are you sure you want to delete this event?")) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/events/${id}`, { method: "DELETE", headers: authHeaders });
+      const res = await fetch(`https://rx-alphaschool-portal.onrender.com/api/events/${id}`, { method: "DELETE", headers: authHeaders });
       if (res.ok) setEvents(events.filter((e) => e._id !== id));
     } catch (err) {
       console.error("Error deleting event:", err);
