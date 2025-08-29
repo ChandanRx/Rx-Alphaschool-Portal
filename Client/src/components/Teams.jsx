@@ -13,12 +13,12 @@ const Teams = () => {
       try {
         const token = localStorage.getItem("authToken");
 
-        const sportsRes = await fetch("http://localhost:5000/api/sports", {
+        const sportsRes = await fetch("https://rx-alphaschool-portal.onrender.com/api/sports", {
           headers: { "Content-Type": "application/json" },
         });
         const sports = await sportsRes.json();
 
-        const playersRes = await fetch("http://localhost:5000/api/register", {
+        const playersRes = await fetch("https://rx-alphaschool-portal.onrender.com/api/register", {
           headers: {
             "Content-Type": "application/json",
             Authorization: token ? `Bearer ${token}` : "",
