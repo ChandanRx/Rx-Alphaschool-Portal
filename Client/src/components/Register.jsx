@@ -253,7 +253,7 @@ const Register = () => {
               />
             </div>,
 
-           <div>
+          <div>
   <label htmlFor="profile" className="block mb-1 font-semibold">
     Profile Picture
   </label>
@@ -262,16 +262,14 @@ const Register = () => {
     id="profile"
     name="profile"
     accept="image/*"
-    onChange={handleChange}
-    disabled={!!formData.profile}
-    className="w-full text-gray-700 dark:text-gray-300 disabled:opacity-60 disabled:cursor-not-allowed"
+    disabled  
+    className="w-full text-gray-700 dark:text-gray-300 opacity-60 cursor-not-allowed"
   />
-  {formData.profile && (
-    <p className="text-sm text-gray-500 mt-1">
-      Profile already uploaded
-    </p>
-  )}
-</div>,
+  <p className="text-sm text-green-600 mt-1 font-medium">
+    ✅ User profile already exists
+  </p>
+</div>
+,
 
 
             <div>
