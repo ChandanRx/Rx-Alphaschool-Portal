@@ -253,19 +253,26 @@ const Register = () => {
               />
             </div>,
 
-            <div>
-              <label htmlFor="profile" className="block mb-1 font-semibold">
-                Profile Picture
-              </label>
-              <input
-                type="file"
-                id="profile"
-                name="profile"
-                accept="image/*"
-                onChange={handleChange}
-                className="w-full text-gray-700 dark:text-gray-300"
-              />
-            </div>,
+           <div>
+  <label htmlFor="profile" className="block mb-1 font-semibold">
+    Profile Picture
+  </label>
+  <input
+    type="file"
+    id="profile"
+    name="profile"
+    accept="image/*"
+    onChange={handleChange}
+    disabled={!!formData.profile}
+    className="w-full text-gray-700 dark:text-gray-300 disabled:opacity-60 disabled:cursor-not-allowed"
+  />
+  {formData.profile && (
+    <p className="text-sm text-gray-500 mt-1">
+      Profile already uploaded
+    </p>
+  )}
+</div>
+
 
             <div>
               <label htmlFor="email" className="block mb-1 font-semibold">
