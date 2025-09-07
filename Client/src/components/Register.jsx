@@ -271,7 +271,7 @@ const Register = () => {
       Profile already uploaded
     </p>
   )}
-</div>
+</div>,
 
 
             <div>
